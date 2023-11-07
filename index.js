@@ -207,8 +207,7 @@ router.delete('/remove-from-cart/:userId/:productId', async(req,res)=>{
 app.get('/',async(req,res)=>{
     console.log("server is ready")
   })
-  const PORT = process.env.PORT || 3001
-app.listen(PORT,() => {
-    console.log("Server is running on port "+ PORT)
-})
-
+  const port = process.env.PORT || 3001; // Use the provided port or a default (e.g., 3001)
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
