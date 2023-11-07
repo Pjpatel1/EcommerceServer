@@ -8,7 +8,8 @@ const app = express();
 const router = express.Router();
 const crypto = require('crypto');
 const Cart = require('./Cart');
-
+const path = require('path')
+app.use(express.static(path.join(__dirname+"/public")))
 app.use(cors())
 app.use(express.json())
 app.use('/cart', router);
@@ -206,7 +207,8 @@ router.delete('/remove-from-cart/:userId/:productId', async(req,res)=>{
 app.get('/',async(req,res)=>{
     console.log("server is ready")
   })
-app.listen(3001,() => {
-    console.log("Server is running on port 3001")
+  const PORT = process.env.PORT || 3001
+app.listen(PORT,() => {
+    console.log("Server is running on port "+ PORT)
 })
 
