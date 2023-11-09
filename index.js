@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const mongoose  = require ('mongoose')
-const {v4: uuidv4} = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const cors = require ('cors')
 const ProductModel = require('./Products')
 const Usermodel = require('./User');
