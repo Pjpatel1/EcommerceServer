@@ -16,6 +16,12 @@ const UserSchema = new mongoose.Schema({
       Password: {
         type: String,
         required: true
+      },
+      Verificationtoken:
+      {
+        type: String,
+        require: true,
+        unique: true,
       }
 })
 const Usermodel =  mongoose.model("User", UserSchema)
